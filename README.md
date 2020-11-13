@@ -1,2 +1,2 @@
-#  What_I_think_about_ui_design
+메인화면 도마뱀 호버시 슬라이드 갤러리 
  
