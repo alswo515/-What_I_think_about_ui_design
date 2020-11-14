@@ -29,77 +29,89 @@ main{
     display: none;
 }
 
-canvas .slide-outer {
-    height: 100%;
-    position: relative;
-}
-
-.slide-outer .marrow {
-    font-size: 80px;
-    color: #fff;
+.multi_rolling {
+    display: none;
+    padding: 50px 30px;
+    position: relative
+  }
+  
+  .multi_rolling h2 {
+      color: aqua;
+      z-index: 999999999999;
+    text-align: center;
+    margin-bottom: 50px;
+    font-size: 40px;
+  }
+  
+  .multi_rolling img {
+    width: 100%;
+    /* 슬라이드박스의 좌우측 간격 ↓ */
+    padding: 0 0px
+  }
+  
+  .multi_rolling .marrow {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
     background: none;
-}
-.slide-outer .prevArrow {
-    left: 10%;
-    z-index: 999;
-}
-
-.slide-outer .nextArrow {
-    right: 10%;
-}
-
-
-canvas .slide-inner {
-    height: 100%;
-}
-
-canvas .slide-inner .slide{
-    height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-}
-
-/* .slide1 {
-    background-image: url(../images/popolImage/라바타2-명도.jpg);
-} */
-.slide-outer .slick-dots {
+    border: none;
+    font-size: 50px;
+    color: #999;
+  }
+  
+  .multi_rolling .prevArrow {
+    left: -30px;
+    z-index: 99999999
+  }
+  
+  .multi_rolling .nextArrow {
+    right: -30px
+  }
+  
+  .multi_rolling .slick-dots {
     position: absolute;
-    bottom: 20px;
+    bottom: -30px;
     width: 100%;
-    text-align: center;
-}
-
-.slide-outer .slick-dots li {
-    width: 100px;
-    height: 3px;
-    background: #777;
-    display: inline-block;
-    margin: 0 5px;
-    position: relative;
-}
-
-.slide-outer .slick-dots li button {
-    width: 0%;
-    height: 3px;
-    text-indent: -99999px;
+    text-align: center
+  }
+  
+  .multi_rolling .slick-dots li {
+    display: inline-block
+  }
+  
+  .multi_rolling .slick-dots li button {
+    width: 15px;
+    height: 15px;
+    background: #999;
+    border: none;
+    text-indent: -9999px;
     overflow: hidden;
-    background: #777;
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-
-.slide-outer .slick-dots li.slick-active button {
-    background: #000;
-    animation: progressbar 4.5s both;
-    /* 애니메이션 시간은 슬라이드 넘어가는 시간인 제이쿼리에서 준값과 똑같이 줘야한다 */
-}
-
+    border-radius: 50%;
+    margin: 0 5px;
+  }
+  
+  .multi_rolling .slick-dots li.slick-active button {
+    background: #000
+  }
+  
+  .multi_rolling .slick-slide {
+    /* 슬릭슬라이더 안에 있는 모든 슬라이드 */
+    opacity: 0.6;
+    transform: scale(0.85);
+    /* 커지는느낌이 부드럽게 ↓ */
+    transition: all 0.5s;
+  }
+  
+  .multi_rolling .slick-slide.slick-active {
+    /* 무대 공간에 보여지는  슬라이드, slidesToShow */
+    opacity: 1;
+  }
+  
+  .multi_rolling .slick-slide.slick-active.slick-current {
+    /* 무대 중앙에 있는 슬라이드 하나 */
+    /* opacity:1; */
+    transform: scale(1)
+  }
 
 
 
