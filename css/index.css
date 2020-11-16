@@ -1,43 +1,53 @@
 @charset "utf-8";
 @import url("reset (1).css") ;
 
+body,html{
+  width: 100%;
+  height: 100%;
+}
+
 main{
     height: 100%;
+    position: relative;
 }
 
 .site_main{
     display: block;
     text-align: center;
+    width: 50%;
     position: absolute;
-    bottom: 100px;
-    left: 0;
-    width: 100%;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%,-50%);
 }
 
 .site_main img{
-    max-width: 30%;
+    max-width: 50%;
 }
 
-.siteMainOn canvas{
+main canvas{
     background: url(../images/도마뱀비닐.png) no-repeat;
-    background-size: cover ;
+    background-size: cover;
+    background-position: center;
     width: 100%;
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
     display: none;
+}
+
+section{
+  height: 100%;
+  position: relative;
 }
 
 .multi_rolling {
-    display: none;
+    display: block;
     padding: 50px 30px;
     position: relative
   }
   
   .multi_rolling h2 {
-      color: aqua;
-      z-index: 999999999999;
+    color: aqua;
+    z-index: 999999999999;
     text-align: center;
     margin-bottom: 50px;
     font-size: 40px;
@@ -97,7 +107,7 @@ main{
   .multi_rolling .slick-slide {
     /* 슬릭슬라이더 안에 있는 모든 슬라이드 */
     opacity: 0.6;
-    transform: scale(0.85);
+    transform: scale(0.5);
     /* 커지는느낌이 부드럽게 ↓ */
     transition: all 0.5s;
   }
@@ -110,24 +120,17 @@ main{
   .multi_rolling .slick-slide.slick-active.slick-current {
     /* 무대 중앙에 있는 슬라이드 하나 */
     /* opacity:1; */
-    transform: scale(1)
+    transform: scale(0.85)
   }
 
-
-
-
-
-
-
-
-
-
 /* 숨겨짐 */
-main button{
-    display: block;
-    position: absolute;
+button{
+    display: none;
+    position: fixed;
     right: 20px;
     top:10px;
     width: 100px;
     height: 100px;
 }
+
+
