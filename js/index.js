@@ -3,7 +3,7 @@
 
     $('.site_main img').hover(
         function(){
-            $('.site_main').fadeOut(100)
+            $('.site_main').fadeOut(100).removeClass('on')
             $('main button').fadeIn(100)
         },function(){
             $('main canvas').fadeIn(100)
@@ -12,12 +12,14 @@
     
     $('main button').on('click',function(){
         $('main canvas').fadeOut(100);
-        $('.site_main').fadeIn(100)
+        $('.site_main').fadeIn(100).addClass('on')
+        //논리값 변환시키기
+        if( $('.site_main').hasClass('on') ){
+            $('main button').fadeOut(100)
+        }
     })
-    //논리값 변환시키기
-    if( $('.site_main img').fadeIn() ){
-        $('main button').fadeOut(100)
-    }
+
+    
 
     $(".multi_visual").slick({
         autoplay: true, // 자동재생
