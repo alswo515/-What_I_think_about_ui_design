@@ -41,14 +41,19 @@ section{
 
 .multi_rolling {
     display: block;
-    padding: 50px 30px;
-    position: relative
+    /* padding: 50px 30px; */
+    position: relative;
+    background: aqua;
   }
-  
+
+  .slick-track{
+    background: red;
+  }
+
   .multi_rolling h2 {
     color: aqua;
     z-index: 999999999999;
-    text-align: center;
+    /* text-align: center; */
     margin-bottom: 50px;
     font-size: 40px;
   }
@@ -56,7 +61,7 @@ section{
   .multi_rolling img {
     width: 100%;
     /* 슬라이드박스의 좌우측 간격 ↓ */
-    padding: 0 0px
+    /* padding: 0 0px */
   }
   
   .multi_rolling .marrow {

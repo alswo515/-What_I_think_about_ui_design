@@ -23,9 +23,9 @@
 
     $(".multi_visual").slick({
         autoplay: true, // 자동재생
-        autoplaySpeed: 3000, // 간격시간
+        autoplaySpeed: 1000, // 간격시간
         dots: false, // 동그라미버튼
-        speed: 600, // 바뀌는시간(생략가능)
+        speed: 500, // 바뀌는시간(생략가능)
         centerMode: true,
         centerPadding: "80px",
         slidesToShow: 3, // 보여질슬라이드수(생략가능)
